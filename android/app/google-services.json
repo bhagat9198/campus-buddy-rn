@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "246970581651",
+    "firebase_url": "https://c-buddy-app-default-rtdb.firebaseio.com",
+    "project_id": "c-buddy-app",
+    "storage_bucket": "c-buddy-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:246970581651:android:2719b60761c7ce43ad8366",
+        "android_client_info": {
+          "package_name": "com.campusbuddy"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "246970581651-3iksd64bpj8ksesfts8184naav0vq256.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.campusbuddy",
+            "certificate_hash": "33b3f35a8e6885006a145d404af12df0350b1c0c"
+          }
+        },
+        {
+          "client_id": "246970581651-c5kaiviuevrsuuqfk0s9ucgspm1qahpo.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD7oiMGp3LUHgOGY0JLs8KL04zUNb-J7Cs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "246970581651-c5kaiviuevrsuuqfk0s9ucgspm1qahpo.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
