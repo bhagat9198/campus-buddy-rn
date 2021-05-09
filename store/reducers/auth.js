@@ -1,4 +1,6 @@
-import { AUTHENTICATION } from "./../actions/auth";
+/* eslint-disable */
+
+import {AUTHENTICATION} from './../actions/auth';
 
 const initalAuthState = {
   auth: false,

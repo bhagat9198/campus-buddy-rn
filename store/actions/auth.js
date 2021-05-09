@@ -1,1 +1,3 @@
-export const  AUTHENTICATION = 'AUTHENTICATION';
+/* eslint-disable */
+
+export const AUTHENTICATION = 'AUTHENTICATION';

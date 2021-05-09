@@ -1,12 +1,14 @@
-import { db } from "./../firebase";
+/* eslint-disable */
 
-export const THEME_TOGGLE = "THEME_TOGGLE";
+import auth from '@react-native-firebase/auth'
+import firestore from '@react-native-firebase/firestore'
 
-export const themeToggle = (darkState) => {
+export const THEME_TOGGLE = 'THEME_TOGGLE';
+
+export const themeToggle = darkState => {
   return async (dispatch, getState) => {
-   
     let auth = getState().authReducer.auth;
-    if(! auth) {
+    if (!auth) {
       dispatch({
         type: THEME_TOGGLE,
         data: !darkState,
@@ -18,7 +20,7 @@ export const themeToggle = (darkState) => {
 
     let userDarkState;
     try {
-      const ref = await db.collection("miscellaneous").doc("theme").doc();
+      const ref = await firestore().collection('miscellaneous').doc('theme').doc();
       const refDoc = await ref.get();
       const refData = await refDoc.data();
       refData.dark = !refData.dark;
@@ -27,7 +29,7 @@ export const themeToggle = (darkState) => {
     } catch (error) {
       return {
         status: false,
-        title: "Firebase Error",
+        title: 'Firebase Error',
         message: error.message,
       };
     }
@@ -45,19 +47,19 @@ export const themeToggle = (darkState) => {
 export const extractTheme = () => {
   return async (dispatch, getState) => {
     let auth = getState().authReducer.auth;
-    if(!auth) {
+    if (!auth) {
       return;
     }
-    
+
     let darkState;
     try {
-      const ref = await db.collection("miscellaneous").doc("theme");
+      const ref = await firestore().collection('miscellaneous').doc('theme');
       const refDoc = await ref.get();
       darkState = refDoc.dark;
     } catch (error) {
       return {
         status: false,
-        title: "Firebase Error",
+        title: 'Firebase Error',
         message: error.message,
       };
     }

@@ -1,7 +1,9 @@
-import { THEME_TOGGLE } from "./../actions/app";
+/* eslint-disable */
+
+import {THEME_TOGGLE} from './../actions/app';
 
 const initalAppState = {
-  dark: true,
+  dark: false,
 };
 
 const appReducer = (state = initalAppState, action) => {
